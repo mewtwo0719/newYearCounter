@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppings', sans-serif;
+}
+
+body, html{
+    height: 100%;
+
+}
+
+.bg-image {
+    /* The image used */
+    background-image: url("images/bg.jpg");
+  
+    /* Add the blur effect */
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+  
+    /* Full height */
+    height: 100%;
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+  }
+  .container{
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+    color: white;
+    font-weight: bold;
+    z-index: 2;
+    width: 80%;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+  }
+  .frame{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 3em;
+    background-image: url("images/bg.jpg");
+    background-size: cover;
+    background-position-y: bottom -200px;
+    background-repeat: no-repeat;
+    height: 400px;
+    width: 600px;
+    border: 3px solid #ffffff;
+    text-shadow: 0px 0px 3px black;
+  }
+
+  .countdown-container{
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      padding-top: 2em;
+      width: 100%;
+      justify-content: space-evenly;
+  }
+  .countdown-number{
+    font-size: 48px;
+    font-family: 'Monoton', cursive;
+    text-shadow: 0px 0px 3px black;
+    color: white;
+  }
+  .countdown-text{
+      font-size: small;
+      text-shadow: 0px 0px 3px black;
+  }
+  @media only screen and (max-width: 450px) {
+      .countdown-container{
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);   
+      }
+      .countdown-section:first-child{
+        position: relative;
+        left: 50%;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+
+      }
+      .countdown-section:nth-child(2){
+        position: relative;
+        left: 50%;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+
+      }
+      .countdown-section:nth-child(3){
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 3;
+
+      }
+      .countdown-section:nth-child(4){
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+
+      }
+      .countdown-section:nth-child(5){
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        grid-row-end: 3;
+ 
+      }
+
+      .frame{
+          background-position: center;
+      }
+
+      
+  }
